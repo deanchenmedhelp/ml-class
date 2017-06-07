@@ -19,6 +19,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.dummy import DummyClassifier
 
 nb = DummyClassifier(strategy='most_frequent')
+#nb = DummyClassifier(strategy='uniform')
 
 prop_train = 0.7
 n_train = int(np.ceil(fixed_target.shape[0] * prop_train))
@@ -29,4 +30,4 @@ print('testing on {} examples'.format(n_test))
 nb.fit(counts[:n_train], fixed_target[:n_train])
 
 predictions = nb.predict(counts[n_train:])
-print(sum(predictions == fixed_target[n_train:])/n_test)
+print(sum(predictions == fixed_target[n_train:])/(n_test+0.0))

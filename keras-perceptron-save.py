@@ -32,3 +32,4 @@ model.fit(X_train, y_train, validation_data=(X_test, y_test))
 # Final evaluation of the model
 scores = model.evaluate(X_test, y_test, verbose=0)
 model.save("perceptron.h5")
+

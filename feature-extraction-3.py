@@ -15,8 +15,19 @@ count_vect.fit(fixed_text)
 
 # turns the text into a sparse matrix
 counts = count_vect.transform(fixed_text)
+
+# prints first 2 rows
 print(fixed_text[0:2])
+
+# prints first 2 rows, omitting 0s in the sparse matrix
 print(counts[0:2])
+
+# vocabulary_ is a dictionary                                                   
+# finds the key where value is 430 in the dictionary                            
+# mydict = count_vect.vocabulary_
+# print mydict.keys()[mydict.values().index(430)]
+# or 
+# print(count_vect.get_feature_names()[430])                                 
 
 # some other fun things to try
 #print(fixed_text[0])

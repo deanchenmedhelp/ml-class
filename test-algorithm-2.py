@@ -32,7 +32,7 @@ from sklearn.naive_bayes import MultinomialNB
 nb = MultinomialNB()
 
 # (Tweets 0 to 5999 are used for training data)
-nb.fit(counts[0:6000], target[0:6000])
+nb.fit(counts[1000:6000], target[1000:6000])
 
 # See what the classifier predicts for some new tweets:
 # (Tweets 6000 to 9091 are used for testing)
